@@ -1,0 +1,5 @@
+{
+  "name": "Otimiza+ Gestão",
+  "description": "Site institucional moderno para Otimiza+ Gestão, especializada em dados, sistemas e automação de processos empresariais.",
+  "requestFramePermissions": ["geolocation"]
+}
