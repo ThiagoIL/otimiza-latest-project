@@ -43,26 +43,26 @@ export const Home = () => {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] mb-8 tracking-tight font-display">
-                  Transforme Dados em <br />
-                  Decisões Lucrativas
+                  Sua Empresa Fatura Bem, Mas <br />
+                  Você Não Sabe Onde Está o Lucro?
                 </h1>
                 <p className="text-xl md:text-[20px] text-white/90 mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans">
-                  Aumente receita, reduza custos e domine seu mercado com inteligência de dados em tempo real.
+                  Centralize suas planilhas em um painel de BI e veja entradas, saídas e resultado em tempo real — sem depender de terceiros pra entender seus números.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
                     <Link
-                      to="/obrigado-whatsapp"
-                      aria-label="Falar com um especialista"
+                      to="/obrigado-whatsapp?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20o%20BI%20da%20Otimiza%2B"
+                      aria-label="Falar com um especialista em BI no WhatsApp"
                       className="w-full sm:w-auto flex items-center justify-center space-x-3 bg-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-emerald-600 transition-all shadow-[0_20px_40px_-10px_rgba(39,174,96,0.5)] active:scale-95 group"
                     >
-                      <span>Falar com um Especialista</span>
+                      <span>Falar com Especialista em BI</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                   <p className="text-[13px] text-white/80 font-sans lg:pl-2">
-                    ✓ Conversa estratégica | Sem compromisso
+                    ✓ +30 empresas já usam nosso BI | ✓ Diagnóstico gratuito em 15 min
                   </p>
                 </div>
               </motion.div>
@@ -81,15 +81,20 @@ export const Home = () => {
                   transition={{ duration: 1, delay: 0.2 }}
                   className="relative z-10 bg-white/10 backdrop-blur-md p-2 rounded-3xl shadow-2xl overflow-hidden border border-white/30"
                 >
-                  <img 
-                    src="/image/banner/hero.webp" 
-                    alt="Dashboard mostrando gráficos da Otimiza+" 
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    poster="/image/banner/hero-poster.jpg"
                     width="800"
                     height="500"
-                    fetchPriority="high"
                     className="rounded-2xl w-full h-auto opacity-100 shadow-inner"
-                    referrerPolicy="no-referrer"
-                  />
+                    aria-label="Dashboard da Otimiza+ em uso, mostrando gráficos financeiros em tempo real"
+                  >
+                    <source src="/video/hero-dashboard-loop.webm" type="video/webm" />
+                    <source src="/video/hero-dashboard-loop.mp4" type="video/mp4" />
+                  </video>
                   {/* Decorative Internal Overlay */}
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-accent/10 to-transparent pointer-events-none"></div>
                 </motion.div>

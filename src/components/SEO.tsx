@@ -14,7 +14,7 @@ interface SEOProps {
 const DEFAULT_KEYWORDS = "implantação de sistemas, consultoria empresarial, automação de processos, dashboards power bi, business intelligence, Dashboard Financeiro, Dashboard Produção, Dashboard Comercial, Dashboard Em estoque, Planilha Financeira, Api, API conta azul, API omie, empresa de BI, otimização de processos, sistemas empresariais, consultoria em dados, implantação de ERP, Natal RN, João Pessoa PB, Mossoró RN, Fortaleza CE";
 const DEFAULT_DESCRIPTION = "Especialistas em transformar dados em decisões inteligentes. Implantação de sistemas, automação de processos e BI para empresas que buscam crescimento e eficiência operacional.";
 const SITE_URL = "https://otimizamaisgestao.com";
-const DEFAULT_IMAGE = `${SITE_URL}/image/banner/hero.webp`;
+const DEFAULT_IMAGE = `${SITE_URL}/image/banner/hero-poster.jpg`;
 
 export const SEO = ({ 
   title, 
@@ -39,7 +39,7 @@ export const SEO = ({
 
       {/* Performance Optimization */}
       {preloadHero && (
-        <link rel="preload" as="image" href="/image/banner/hero.webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/image/banner/hero-poster.jpg" fetchPriority="high" />
       )}
 
       {/* Open Graph / Facebook */}

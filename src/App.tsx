@@ -19,6 +19,7 @@ const Cases = lazy(() => import('./pages/Cases').then(m => ({ default: m.Cases }
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy').then(m => ({ default: m.PrivacyPolicy })));
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse').then(m => ({ default: m.TermsOfUse })));
 const ObrigadoWhatsApp = lazy(() => import('./pages/ObrigadoWhatsApp').then(m => ({ default: m.ObrigadoWhatsApp })));
+const LandingBI = lazy(() => import('./pages/LandingBI').then(m => ({ default: m.LandingBI })));
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -27,6 +28,41 @@ const ScrollToTop = () => {
     trackPageView(pathname);
   }, [pathname]);
   return null;
+};
+
+// Dedicated ad-campaign landing pages (e.g. /lp/bi) skip the global site
+// navigation and footer on purpose — a paid-traffic landing page should
+// only offer a single conversion path, not an exit into the full site menu.
+const AppShell = () => {
+  const { pathname } = useLocation();
+  const isStandaloneLanding = pathname.startsWith('/lp/');
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      {!isStandaloneLanding && <Navbar />}
+      <main className="flex-grow">
+        <Suspense fallback={<div className="min-h-[50vh] flex items-center justify-center"><div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div></div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/sobre" element={<About />} />
+            <Route path="/servicos" element={<Services />} />
+            <Route path="/blog" element={<BlogFeed />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/servicos/:slug" element={<ServiceDetail />} />
+            <Route path="/contato" element={<Contact />} />
+            <Route path="/casos" element={<Cases />} />
+            <Route path="/privacidade" element={<PrivacyPolicy />} />
+            <Route path="/termos" element={<TermsOfUse />} />
+            <Route path="/obrigado-whatsapp" element={<ObrigadoWhatsApp />} />
+            <Route path="/lp/bi" element={<LandingBI />} />
+          </Routes>
+        </Suspense>
+      </main>
+      {!isStandaloneLanding && <Footer />}
+      <WhatsAppButton />
+      <CookieBanner />
+    </div>
+  );
 };
 
 export default function App() {
@@ -38,29 +74,7 @@ export default function App() {
     <HelmetProvider>
       <Router>
         <ScrollToTop />
-        <div className="flex flex-col min-h-screen">
-          <Navbar />
-          <main className="flex-grow">
-            <Suspense fallback={<div className="min-h-[50vh] flex items-center justify-center"><div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div></div>}>
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/sobre" element={<About />} />
-                <Route path="/servicos" element={<Services />} />
-                <Route path="/blog" element={<BlogFeed />} />
-                <Route path="/blog/:slug" element={<BlogPost />} />
-                <Route path="/servicos/:slug" element={<ServiceDetail />} />
-                <Route path="/contato" element={<Contact />} />
-                <Route path="/casos" element={<Cases />} />
-                <Route path="/privacidade" element={<PrivacyPolicy />} />
-                <Route path="/termos" element={<TermsOfUse />} />
-                <Route path="/obrigado-whatsapp" element={<ObrigadoWhatsApp />} />
-              </Routes>
-            </Suspense>
-          </main>
-          <Footer />
-          <WhatsAppButton />
-          <CookieBanner />
-        </div>
+        <AppShell />
       </Router>
     </HelmetProvider>
   );
