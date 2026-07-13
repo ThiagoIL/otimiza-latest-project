@@ -1,0 +1,55 @@
+# Otimiza+ — sample Nginx server block for static deployment of the Vite/React build (dist/)
+#
+# 1. Run `npm run build` and copy the contents of dist/ to /var/www/otimiza (or wherever
+#    `root` points below).
+# 2. Copy this file to /etc/nginx/sites-available/otimiza.conf, adjust domain/paths,
+#    then: ln -s /etc/nginx/sites-available/otimiza.conf /etc/nginx/sites-enabled/
+# 3. sudo nginx -t && sudo systemctl reload nginx
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name otimizamaisgestao.com www.otimizamaisgestao.com;
+
+    root /var/www/otimiza;
+    index index.html;
+
+    # Gzip compression
+    gzip on;
+    gzip_types text/plain text/css application/javascript application/json image/svg+xml;
+    gzip_min_length 1024;
+
+    # Static assets: cache aggressively (filenames are content-hashed by Vite)
+    location ~* \.(?:css|js|woff2?|ttf|eot)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    location ~* \.(?:jpg|jpeg|png|webp|svg|ico)$ {
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    location ~* \.(?:mp4|webm)$ {
+        expires 30d;
+        add_header Cache-Control "public";
+        try_files $uri =404;
+    }
+
+    # HTML must always revalidate so deploys show up immediately
+    location / {
+        add_header Cache-Control "no-cache";
+        # SPA fallback — required for client-side routes such as
+        # /lp/bi, /servicos/business-intelligence, /obrigado-whatsapp, etc.
+        try_files $uri $uri/ /index.html;
+    }
+}
+
+# Optional: redirect www -> apex (or vice-versa, pick one canonical host)
+# server {
+#     listen 80;
+#     server_name www.otimizamaisgestao.com;
+#     return 301 http://otimizamaisgestao.com$request_uri;
+# }

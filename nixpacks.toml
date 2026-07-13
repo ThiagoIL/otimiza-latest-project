@@ -1,0 +1,21 @@
+# Nixpacks build configuration.
+# Used by EasyPanel (and any other Nixpacks-based host) to build and run
+# this project without any manual Docker setup.
+#
+# Flow: install deps -> vite build (creates /dist) -> start Node server
+# that serves /dist as static files with SPA fallback (see server.ts).
+
+[variables]
+NODE_ENV = "production"
+
+[phases.setup]
+nixPkgs = ["nodejs_20"]
+
+[phases.install]
+cmds = ["npm ci"]
+
+[phases.build]
+cmds = ["npm run build"]
+
+[start]
+cmd = "npm run start"
