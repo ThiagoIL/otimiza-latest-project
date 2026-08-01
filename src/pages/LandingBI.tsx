@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { PARTNERS, SUCCESS_CASES } from '../data';
 import { SEO } from '../components/SEO';
+import { DashboardCascade } from '../components/DashboardCascade';
 
 const WHATSAPP_MSG = encodeURIComponent(
   'Olá, vim do anúncio e quero saber mais sobre o BI da Otimiza+'
@@ -139,23 +140,7 @@ export const LandingBI = () => {
                 transition={{ duration: 0.9, delay: 0.2 }}
                 className="w-full lg:w-[52%] flex justify-center lg:justify-end"
               >
-                <div className="relative w-full max-w-2xl bg-white/10 backdrop-blur-md p-2 rounded-3xl shadow-2xl overflow-hidden border border-white/30">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster="/image/banner/hero-poster.jpg"
-                    width="800"
-                    height="500"
-                    className="rounded-2xl w-full h-auto shadow-inner"
-                    aria-label="Dashboard da Otimiza+ em uso, mostrando gráficos financeiros em tempo real"
-                  >
-                    <source src="/video/hero-dashboard-loop.webm" type="video/webm" />
-                    <source src="/video/hero-dashboard-loop.mp4" type="video/mp4" />
-                  </video>
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-accent/10 to-transparent pointer-events-none" />
-                </div>
+                <DashboardCascade />
               </motion.div>
             </div>
           </div>

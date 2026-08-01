@@ -6,6 +6,7 @@ import { SERVICES, BLOG_POSTS, PARTNERS, SUCCESS_CASES } from '../data';
 import { CONTACT_INFO } from '../constants';
 import { Partner } from '../types';
 import { SEO } from '../components/SEO';
+import { DashboardCascade } from '../components/DashboardCascade';
 
 const iconMap: Record<string, React.ElementType> = {
   Settings,
@@ -79,24 +80,9 @@ export const Home = () => {
                   initial={{ opacity: 0, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 1, delay: 0.2 }}
-                  className="relative z-10 bg-white/10 backdrop-blur-md p-2 rounded-3xl shadow-2xl overflow-hidden border border-white/30"
+                  className="relative z-10"
                 >
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    poster="/image/banner/hero-poster.jpg"
-                    width="800"
-                    height="500"
-                    className="rounded-2xl w-full h-auto opacity-100 shadow-inner"
-                    aria-label="Dashboard da Otimiza+ em uso, mostrando gráficos financeiros em tempo real"
-                  >
-                    <source src="/video/hero-dashboard-loop.webm" type="video/webm" />
-                    <source src="/video/hero-dashboard-loop.mp4" type="video/mp4" />
-                  </video>
-                  {/* Decorative Internal Overlay */}
-                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-accent/10 to-transparent pointer-events-none"></div>
+                  <DashboardCascade />
                 </motion.div>
                 
                 {/* Floating elements to simulate a dashboard feel */}
