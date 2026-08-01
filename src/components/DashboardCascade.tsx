@@ -45,7 +45,7 @@ const CASCADE_IMAGES = [
 
 export const DashboardCascade = () => {
   return (
-    <div className="relative w-full max-w-2xl mx-auto aspect-[10/7]">
+    <div className="relative w-full max-w-4xl mx-auto aspect-[10/7]">
       {CASCADE_IMAGES.map((img) => (
         <div
           key={img.src}

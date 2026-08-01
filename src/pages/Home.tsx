@@ -37,40 +37,40 @@ export const Home = () => {
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Text Content (48%) */}
-            <div className="w-full lg:w-[48%] text-center lg:text-left space-y-10">
+            <div className="w-full lg:w-[42%] text-center lg:text-left space-y-10">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] mb-8 tracking-tight font-display">
-                  Sua Empresa Fatura Bem, Mas <br />
-                  Você Não Sabe Onde Está o Lucro?
+                  Transforme Dados em <br />
+                  Decisões Lucrativas
                 </h1>
                 <p className="text-xl md:text-[20px] text-white/90 mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans">
-                  Centralize suas planilhas em um painel de BI e veja entradas, saídas e resultado em tempo real — sem depender de terceiros pra entender seus números.
+                  Aumente receita, reduza custos e domine seu mercado com inteligência de dados em tempo real.
                 </p>
                 
                 <div className="space-y-4">
                   <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
                     <Link
-                      to="/obrigado-whatsapp?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20saber%20mais%20sobre%20o%20BI%20da%20Otimiza%2B"
-                      aria-label="Falar com um especialista em BI no WhatsApp"
+                      to="/obrigado-whatsapp"
+                      aria-label="Falar com um especialista"
                       className="w-full sm:w-auto flex items-center justify-center space-x-3 bg-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-emerald-600 transition-all shadow-[0_20px_40px_-10px_rgba(39,174,96,0.5)] active:scale-95 group"
                     >
-                      <span>Falar com Especialista em BI</span>
+                      <span>Falar com um Especialista</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
                   <p className="text-[13px] text-white/80 font-sans lg:pl-2">
-                    ✓ +30 empresas já usam nosso BI | ✓ Diagnóstico gratuito em 15 min
+                    ✓ Conversa estratégica | Sem compromisso
                   </p>
                 </div>
               </motion.div>
             </div>
 
             {/* Image Content (52%) */}
-            <div className="w-full lg:w-[52%] flex justify-center lg:justify-end">
+            <div className="w-full lg:w-[58%] flex justify-center lg:justify-end">
               <div className="relative w-full max-w-2xl lg:max-w-none">
                 {/* Background Glows */}
                 <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-[80px] animate-pulse"></div>

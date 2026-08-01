@@ -65,8 +65,8 @@ export const LandingBI = () => {
   return (
     <>
       <SEO
-        title="BI para Empresas | Painel Financeiro em Tempo Real"
-        description="Centralize suas planilhas em um painel de BI e veja entradas, saídas e resultado em tempo real. Diagnóstico gratuito em 15 minutos."
+        title="BI para Empresas | Controle de Custos e Faturamento"
+        description="Nosso painel de BI centraliza seus dados e mostra, em tempo real, onde estão os custos e o lucro da sua empresa. Diagnóstico gratuito em 15 minutos."
         canonical="https://otimizamaisgestao.com/lp/bi"
       />
 
@@ -103,18 +103,19 @@ export const LandingBI = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="w-full lg:w-[48%] text-center lg:text-left"
+                className="w-full lg:w-[42%] text-center lg:text-left"
               >
                 <span className="inline-block bg-accent/15 text-accent border border-accent/30 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
                   Business Intelligence
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-white leading-[1.1] mb-6 tracking-tight font-display">
-                  Sua Empresa Fatura Bem, Mas <br className="hidden lg:block" />
-                  Você Não Sabe Onde Está o Lucro?
+                  Controle Total de Custos <br className="hidden lg:block" />
+                  e Faturamento
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Veja entradas, saídas e lucro em tempo real, num painel só — sem
-                  planilha, sem depender de terceiros.
+                  Nosso painel de BI centraliza seus dados e mostra, em tempo real, onde
+                  estão os custos e o lucro da sua empresa. Fale agora com um
+                  especialista.
                 </p>
 
                 <div className="space-y-4">
@@ -137,7 +138,7 @@ export const LandingBI = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.9, delay: 0.2 }}
-                className="w-full lg:w-[52%] flex justify-center lg:justify-end"
+                className="w-full lg:w-[58%] flex justify-center lg:justify-end"
               >
                 <DashboardCascade />
               </motion.div>

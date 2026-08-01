@@ -6,8 +6,8 @@
   --font-sans: "Inter", "Roboto", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Montserrat", sans-serif;
   
-  --color-primary: #1a3a52; /* Azul Profundo */
-  --color-secondary: #2471A3; /* Darkened for accessibility */
+  --color-primary: #0B2A5C; /* Azul Profundo (tom do logo) */
+  --color-secondary: #0F5FDC; /* Azul vívido (tom do logo) - Pass AA (5.7:1) */
   --color-accent: #1e8449; /* Darkened for accessibility - Pass AA (4.5:1) */
   --color-neutral-bg: #F5F5F5;
   --color-text-main: #333333;

@@ -35,7 +35,7 @@ export const SEO = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <link rel="canonical" href={currentUrl} />
-      <meta name="theme-color" content="#1a3a52" />
+      <meta name="theme-color" content="#0B2A5C" />
 
       {/* Performance Optimization */}
       {preloadHero && (
