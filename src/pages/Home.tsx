@@ -37,7 +37,7 @@ export const Home = () => {
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
             {/* Text Content (48%) */}
-            <div className="w-full lg:w-[42%] text-center lg:text-left space-y-6">
+            <div className="w-full lg:w-[38%] text-center lg:text-left space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,7 @@ export const Home = () => {
             </div>
 
             {/* Image Content (52%) */}
-            <div className="w-full lg:w-[58%] flex justify-center lg:justify-end">
+            <div className="w-full lg:w-[62%] flex justify-center lg:justify-end">
               <div className="relative w-full max-w-2xl lg:max-w-none">
                 {/* Background Glows */}
                 <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent/20 rounded-full blur-[80px] animate-pulse"></div>

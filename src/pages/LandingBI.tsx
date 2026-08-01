@@ -103,7 +103,7 @@ export const LandingBI = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="w-full lg:w-[42%] text-center lg:text-left"
+                className="w-full lg:w-[38%] text-center lg:text-left"
               >
                 <span className="inline-block bg-accent/15 text-accent border border-accent/30 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5">
                   Business Intelligence
@@ -137,7 +137,7 @@ export const LandingBI = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.9, delay: 0.2 }}
-                className="w-full lg:w-[58%] flex justify-center lg:justify-end"
+                className="w-full lg:w-[62%] flex justify-center lg:justify-end"
               >
                 <DashboardCascade />
               </motion.div>
