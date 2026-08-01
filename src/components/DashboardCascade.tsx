@@ -12,32 +12,32 @@ const CASCADE_IMAGES = [
   {
     src: '/image/dashboards/dash-otif.webp',
     alt: 'Dashboard de Análise de OTIF - logística e entregas',
-    top: '0%',
-    left: '-2%',
-    scale: 0.94,
+    top: '19%',
+    left: '5%',
+    scale: 0.82,
     z: 10,
   },
   {
     src: '/image/dashboards/dash-rh.webp',
     alt: 'Dashboard de People Analytics - RH e colaboradores',
-    top: '11%',
-    left: '7%',
-    scale: 0.96,
+    top: '27%',
+    left: '13%',
+    scale: 0.88,
     z: 20,
   },
   {
     src: '/image/dashboards/dash-comercial.webp',
     alt: 'Dashboard de Ranking de Vendedores - comercial',
-    top: '22%',
-    left: '16%',
-    scale: 0.98,
+    top: '35%',
+    left: '21%',
+    scale: 0.94,
     z: 30,
   },
   {
     src: '/image/dashboards/dash-financeiro.webp',
     alt: 'Dashboard Financeiro - visão geral de receita e lucro',
-    top: '33%',
-    left: '25%',
+    top: '43%',
+    left: '29%',
     scale: 1,
     z: 40,
   },
@@ -45,11 +45,11 @@ const CASCADE_IMAGES = [
 
 export const DashboardCascade = () => {
   return (
-    <div className="relative w-full max-w-2xl mx-auto aspect-[15/10] overflow-hidden">
+    <div className="relative w-full max-w-2xl mx-auto aspect-[10/7]">
       {CASCADE_IMAGES.map((img) => (
         <div
           key={img.src}
-          className="absolute w-[63%] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-white/40"
+          className="absolute w-[58%] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-white/40"
           style={{
             top: img.top,
             left: img.left,
