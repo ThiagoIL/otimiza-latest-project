@@ -97,7 +97,7 @@ export const LandingBI = () => {
           <div className="absolute top-1/4 -right-20 w-96 h-96 bg-accent/20 rounded-full blur-[100px]" />
           <div className="absolute bottom-0 -left-20 w-96 h-96 bg-white/5 rounded-full blur-[100px]" />
 
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-14">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -112,7 +112,7 @@ export const LandingBI = () => {
                   Tenha Controle Total Sobre os <br className="hidden lg:block" />
                   Custos da Sua Operação
                 </h1>
-                <p className="text-base md:text-lg text-white/80 mb-7 leading-relaxed max-w-md mx-auto lg:mx-0">
+                <p className="text-base md:text-lg text-white/80 mb-7 leading-relaxed max-w-lg mx-auto lg:mx-0">
                   Identifique gastos, acompanhe indicadores e tome decisões mais
                   inteligentes com dados centralizados em um painel automatizado.
                 </p>

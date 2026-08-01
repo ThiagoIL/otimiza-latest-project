@@ -10,34 +10,34 @@ const SKEW_DEG = -15;
 
 const CASCADE_IMAGES = [
   {
-    src: '/image/dashboards/dash-otif.webp',
-    alt: 'Dashboard de Análise de OTIF - logística e entregas',
-    top: '24%',
+    src: '/image/dashboards/dash-rh.webp',
+    alt: 'Dashboard de People Analytics - RH e colaboradores',
+    top: '21%',
     left: '2%',
-    scale: 0.82,
+    scale: 0.80,
     z: 10,
   },
   {
-    src: '/image/dashboards/dash-rh.webp',
-    alt: 'Dashboard de People Analytics - RH e colaboradores',
-    top: '31%',
-    left: '10%',
-    scale: 0.88,
+    src: '/image/dashboards/dash-otif.webp',
+    alt: 'Dashboard de Análise de OTIF - logística e entregas',
+    top: '30%',
+    left: '12%',
+    scale: 0.87,
     z: 20,
-  },
-  {
-    src: '/image/dashboards/dash-comercial.webp',
-    alt: 'Dashboard de Ranking de Vendedores - comercial',
-    top: '38%',
-    left: '18%',
-    scale: 0.94,
-    z: 30,
   },
   {
     src: '/image/dashboards/dash-financeiro.webp',
     alt: 'Dashboard Financeiro - visão geral de receita e lucro',
-    top: '45%',
-    left: '26%',
+    top: '39%',
+    left: '22%',
+    scale: 0.94,
+    z: 30,
+  },
+  {
+    src: '/image/dashboards/dash-comercial.webp',
+    alt: 'Dashboard de Ranking de Vendedores - comercial',
+    top: '48%',
+    left: '32%',
     scale: 1,
     z: 40,
   },
@@ -49,7 +49,7 @@ export const DashboardCascade = () => {
       {CASCADE_IMAGES.map((img) => (
         <div
           key={img.src}
-          className="absolute w-[66%] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-white/40"
+          className="absolute w-[58%] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-white/40"
           style={{
             top: img.top,
             left: img.left,
