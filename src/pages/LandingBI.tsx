@@ -65,8 +65,8 @@ export const LandingBI = () => {
   return (
     <>
       <SEO
-        title="BI para Empresas | Controle de Custos e Faturamento"
-        description="Nosso painel de BI centraliza seus dados e mostra, em tempo real, onde estão os custos e o lucro da sua empresa. Diagnóstico gratuito em 15 minutos."
+        title="BI para Empresas | Controle Total de Custos"
+        description="Identifique gastos, acompanhe indicadores e tome decisões mais inteligentes com dados centralizados em um painel automatizado. Diagnóstico gratuito em 15 minutos."
         canonical="https://otimizamaisgestao.com/lp/bi"
       />
 
@@ -98,7 +98,7 @@ export const LandingBI = () => {
           <div className="absolute bottom-0 -left-20 w-96 h-96 bg-white/5 rounded-full blur-[100px]" />
 
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="flex flex-col lg:flex-row items-center gap-14">
+            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-14">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -108,14 +108,13 @@ export const LandingBI = () => {
                 <span className="inline-block bg-accent/15 text-accent border border-accent/30 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5">
                   Business Intelligence
                 </span>
-                <h1 className="text-5xl md:text-6xl lg:text-[62px] font-bold text-white leading-[1.05] mb-5 tracking-tight font-display">
-                  Controle Total de Custos <br className="hidden lg:block" />
-                  e Faturamento
+                <h1 className="text-5xl md:text-6xl lg:text-[58px] font-bold text-white leading-[1.05] mb-5 tracking-tight font-display">
+                  Tenha Controle Total Sobre os <br className="hidden lg:block" />
+                  Custos da Sua Operação
                 </h1>
                 <p className="text-base md:text-lg text-white/80 mb-7 leading-relaxed max-w-md mx-auto lg:mx-0">
-                  Nosso painel de BI centraliza seus dados e mostra, em tempo real, onde
-                  estão os custos e o lucro da sua empresa. Fale agora com um
-                  especialista.
+                  Identifique gastos, acompanhe indicadores e tome decisões mais
+                  inteligentes com dados centralizados em um painel automatizado.
                 </p>
 
                 <div className="space-y-3">

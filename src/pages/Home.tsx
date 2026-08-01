@@ -35,7 +35,7 @@ export const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-primary to-secondary pt-32 pb-20 lg:py-12">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
             {/* Text Content (48%) */}
             <div className="w-full lg:w-[42%] text-center lg:text-left space-y-6">
               <motion.div
@@ -83,19 +83,6 @@ export const Home = () => {
                   className="relative z-10"
                 >
                   <DashboardCascade />
-                </motion.div>
-                
-                {/* Floating elements to simulate a dashboard feel */}
-                <motion.div 
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.8, duration: 0.5 }}
-                  className="absolute -top-6 -right-6 z-20 bg-white p-4 rounded-2xl shadow-2xl animate-float hidden sm:block"
-                >
-                  <BarChart3 className="w-8 h-8 text-secondary mb-1" />
-                  <div className="h-1.5 w-12 bg-slate-100 rounded-full overflow-hidden">
-                    <div className="h-full w-[70%] bg-accent"></div>
-                  </div>
                 </motion.div>
               </div>
             </div>
