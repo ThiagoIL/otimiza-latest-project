@@ -1,37 +1,62 @@
 import React from 'react';
 
-// Real product dashboard screenshots, arranged in a cascading stack
-// (used in the Home hero and the /lp/bi landing page hero).
+// Real product dashboard screenshots, arranged in a cascading stack that
+// matches the reference design: a flat 2D skewY (not a 3D perspective tilt).
+// Measured from the reference image — vertical card edges stay perfectly
+// vertical while the top/bottom edges tilt ~-15deg, which is exactly what
+// `transform: skewY(-15deg)` produces (unlike rotateX/rotateY, which would
+// also converge the vertical edges).
+const SKEW_DEG = -15;
+
 const CASCADE_IMAGES = [
   {
     src: '/image/dashboards/dash-otif.webp',
     alt: 'Dashboard de Análise de OTIF - logística e entregas',
-    className: 'top-0 left-0 w-[68%] rotate-[-9deg] z-10',
+    top: '0%',
+    left: '-2%',
+    scale: 0.94,
+    z: 10,
   },
   {
     src: '/image/dashboards/dash-rh.webp',
     alt: 'Dashboard de People Analytics - RH e colaboradores',
-    className: 'top-[10%] left-[9%] w-[70%] rotate-[-4deg] z-20',
+    top: '11%',
+    left: '7%',
+    scale: 0.96,
+    z: 20,
   },
   {
     src: '/image/dashboards/dash-comercial.webp',
     alt: 'Dashboard de Ranking de Vendedores - comercial',
-    className: 'top-[19%] left-[18%] w-[72%] rotate-[2deg] z-30',
+    top: '22%',
+    left: '16%',
+    scale: 0.98,
+    z: 30,
   },
   {
     src: '/image/dashboards/dash-financeiro.webp',
     alt: 'Dashboard Financeiro - visão geral de receita e lucro',
-    className: 'top-[29%] left-[27%] w-[73%] rotate-[6deg] z-40',
+    top: '33%',
+    left: '25%',
+    scale: 1,
+    z: 40,
   },
 ];
 
 export const DashboardCascade = () => {
   return (
-    <div className="relative w-full aspect-[11/10] max-w-2xl mx-auto">
+    <div className="relative w-full max-w-2xl mx-auto aspect-[15/10] overflow-hidden">
       {CASCADE_IMAGES.map((img) => (
         <div
           key={img.src}
-          className={`absolute rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-white/20 ${img.className}`}
+          className="absolute w-[63%] rounded-xl md:rounded-2xl overflow-hidden shadow-2xl border border-white/40"
+          style={{
+            top: img.top,
+            left: img.left,
+            zIndex: img.z,
+            transform: `skewY(${SKEW_DEG}deg) scale(${img.scale})`,
+            transformOrigin: 'top left',
+          }}
         >
           <img
             src={img.src}

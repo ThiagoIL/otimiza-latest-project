@@ -72,7 +72,7 @@ export const LandingBI = () => {
 
       <div className="font-sans text-text-main">
         {/* Minimal header — logo only, no navigation, single conversion path */}
-        <header className="sticky top-0 z-50 bg-primary/95 backdrop-blur-sm py-4 border-b border-white/10">
+        <header className="sticky top-0 z-50 bg-[#0B2A5C]/95 backdrop-blur-sm py-4 border-b border-white/10">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center sm:justify-start">
             <div className="flex items-center space-x-3">
               <div className="w-9 h-9 flex items-center justify-center">
@@ -93,7 +93,7 @@ export const LandingBI = () => {
         </header>
 
         {/* HERO */}
-        <section className="relative bg-gradient-to-br from-primary via-[#153048] to-secondary overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28">
+        <section className="relative bg-gradient-to-br from-[#0B2A5C] via-[#0D3A85] to-[#0F5FDC] overflow-hidden pt-16 pb-20 md:pt-20 md:pb-28">
           <div className="absolute top-1/4 -right-20 w-96 h-96 bg-accent/20 rounded-full blur-[100px]" />
           <div className="absolute bottom-0 -left-20 w-96 h-96 bg-white/5 rounded-full blur-[100px]" />
 
@@ -112,10 +112,9 @@ export const LandingBI = () => {
                   Sua Empresa Fatura Bem, Mas <br className="hidden lg:block" />
                   Você Não Sabe Onde Está o Lucro?
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 mb-10 leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Centralize suas planilhas em um painel de BI e veja entradas, saídas e
-                  resultado em tempo real — sem depender de terceiros pra entender seus
-                  números.
+                <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                  Veja entradas, saídas e lucro em tempo real, num painel só — sem
+                  planilha, sem depender de terceiros.
                 </p>
 
                 <div className="space-y-4">
@@ -168,7 +167,7 @@ export const LandingBI = () => {
         <section className="py-20 md:py-24 bg-neutral-bg">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0B2A5C] mb-4">
                 Isso soa familiar?
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-lg">
@@ -189,7 +188,7 @@ export const LandingBI = () => {
                   <div className="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center mb-6">
                     <pain.icon className="w-7 h-7 text-red-500" />
                   </div>
-                  <h3 className="text-xl font-bold text-primary mb-3">{pain.title}</h3>
+                  <h3 className="text-xl font-bold text-[#0B2A5C] mb-3">{pain.title}</h3>
                   <p className="text-slate-600 leading-relaxed">{pain.description}</p>
                 </motion.div>
               ))}
@@ -207,10 +206,10 @@ export const LandingBI = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="inline-block bg-secondary/10 text-secondary rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5">
+                <span className="inline-block bg-[#0F5FDC]/10 text-[#0F5FDC] rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5">
                   Como funciona
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                <h2 className="text-3xl md:text-4xl font-bold text-[#0B2A5C] mb-6">
                   Um painel só, com tudo que você precisa ver
                 </h2>
                 <p className="text-slate-600 text-lg mb-8 leading-relaxed">
@@ -229,7 +228,7 @@ export const LandingBI = () => {
                 <Link
                   to={CTA_LINK}
                   aria-label="Quero um diagnóstico gratuito"
-                  className="inline-flex items-center justify-center space-x-3 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-[#132c40] transition-all active:scale-95 group"
+                  className="inline-flex items-center justify-center space-x-3 bg-[#0B2A5C] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#071D42] transition-all active:scale-95 group"
                 >
                   <span>Quero um diagnóstico gratuito</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -244,29 +243,29 @@ export const LandingBI = () => {
                 className="grid grid-cols-2 gap-6"
               >
                 <div className="bg-neutral-bg rounded-2xl p-6 border border-slate-100">
-                  <BarChart3 className="w-8 h-8 text-secondary mb-4" />
-                  <p className="font-bold text-primary mb-1">KPIs em Tempo Real</p>
+                  <BarChart3 className="w-8 h-8 text-[#0F5FDC] mb-4" />
+                  <p className="font-bold text-[#0B2A5C] mb-1">KPIs em Tempo Real</p>
                   <p className="text-sm text-slate-500">
                     Entradas, saídas e resultado sempre atualizados.
                   </p>
                 </div>
                 <div className="bg-neutral-bg rounded-2xl p-6 border border-slate-100 mt-8">
                   <Gauge className="w-8 h-8 text-accent mb-4" />
-                  <p className="font-bold text-primary mb-1">Decisão em Minutos</p>
+                  <p className="font-bold text-[#0B2A5C] mb-1">Decisão em Minutos</p>
                   <p className="text-sm text-slate-500">
                     Nada de esperar relatório manual pra agir.
                   </p>
                 </div>
                 <div className="bg-neutral-bg rounded-2xl p-6 border border-slate-100">
-                  <ShieldCheck className="w-8 h-8 text-primary mb-4" />
-                  <p className="font-bold text-primary mb-1">Segurança Garantida</p>
+                  <ShieldCheck className="w-8 h-8 text-[#0B2A5C] mb-4" />
+                  <p className="font-bold text-[#0B2A5C] mb-1">Segurança Garantida</p>
                   <p className="text-sm text-slate-500">
                     Dados protegidos com padrões enterprise.
                   </p>
                 </div>
                 <div className="bg-neutral-bg rounded-2xl p-6 border border-slate-100 mt-8">
                   <TrendingDown className="w-8 h-8 text-red-500 mb-4 rotate-180" />
-                  <p className="font-bold text-primary mb-1">Custos sob Controle</p>
+                  <p className="font-bold text-[#0B2A5C] mb-1">Custos sob Controle</p>
                   <p className="text-sm text-slate-500">
                     Enxergue exatamente onde o dinheiro está indo.
                   </p>
@@ -280,7 +279,7 @@ export const LandingBI = () => {
         <section className="py-20 md:py-24 bg-neutral-bg">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0B2A5C] mb-4">
                 Quem já centralizou seus dados com a gente
               </h2>
             </div>
@@ -301,7 +300,7 @@ export const LandingBI = () => {
                       : testimonial.testimonial}"
                   </p>
                   <div className="pt-5 border-t border-slate-100">
-                    <p className="font-bold text-primary">{testimonial.clientName}</p>
+                    <p className="font-bold text-[#0B2A5C]">{testimonial.clientName}</p>
                     <p className="text-sm text-slate-500">
                       {testimonial.company} — {testimonial.sector}
                     </p>
@@ -331,7 +330,7 @@ export const LandingBI = () => {
         </section>
 
         {/* FINAL CTA */}
-        <section className="bg-gradient-to-br from-primary via-[#153048] to-secondary py-20 md:py-24 relative overflow-hidden">
+        <section className="bg-gradient-to-br from-[#0B2A5C] via-[#0D3A85] to-[#0F5FDC] py-20 md:py-24 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[100px]" />
           <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
@@ -353,7 +352,7 @@ export const LandingBI = () => {
         </section>
 
         {/* MINIMAL FOOTER — no distracting links, just legitimacy */}
-        <footer className="bg-primary py-8 border-t border-white/5">
+        <footer className="bg-[#0B2A5C] py-8 border-t border-white/5">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div className="flex items-center space-x-3">
               <img
