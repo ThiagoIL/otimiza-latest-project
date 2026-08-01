@@ -37,32 +37,32 @@ export const Home = () => {
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Text Content (48%) */}
-            <div className="w-full lg:w-[42%] text-center lg:text-left space-y-10">
+            <div className="w-full lg:w-[42%] text-center lg:text-left space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] mb-8 tracking-tight font-display">
+                <h1 className="text-5xl md:text-6xl lg:text-[64px] font-bold text-white leading-[1.05] mb-5 tracking-tight font-display">
                   Transforme Dados em <br />
                   Decisões Lucrativas
                 </h1>
-                <p className="text-xl md:text-[20px] text-white/90 mb-12 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans">
+                <p className="text-base md:text-lg text-white/80 mb-8 leading-relaxed max-w-md mx-auto lg:mx-0 font-sans">
                   Aumente receita, reduza custos e domine seu mercado com inteligência de dados em tempo real.
                 </p>
                 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
                     <Link
                       to="/obrigado-whatsapp"
                       aria-label="Falar com um especialista"
-                      className="w-full sm:w-auto flex items-center justify-center space-x-3 bg-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-emerald-600 transition-all shadow-[0_20px_40px_-10px_rgba(39,174,96,0.5)] active:scale-95 group"
+                      className="w-full sm:w-auto flex items-center justify-center space-x-3 bg-accent text-white px-8 py-4 rounded-xl font-bold text-base hover:bg-emerald-600 transition-all shadow-[0_20px_40px_-10px_rgba(39,174,96,0.5)] active:scale-95 group"
                     >
                       <span>Falar com um Especialista</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
-                  <p className="text-[13px] text-white/80 font-sans lg:pl-2">
+                  <p className="text-[13px] text-white/70 font-sans lg:pl-2">
                     ✓ Conversa estratégica | Sem compromisso
                   </p>
                 </div>

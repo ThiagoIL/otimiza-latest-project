@@ -105,29 +105,29 @@ export const LandingBI = () => {
                 transition={{ duration: 0.7 }}
                 className="w-full lg:w-[42%] text-center lg:text-left"
               >
-                <span className="inline-block bg-accent/15 text-accent border border-accent/30 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-6">
+                <span className="inline-block bg-accent/15 text-accent border border-accent/30 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5">
                   Business Intelligence
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-white leading-[1.1] mb-6 tracking-tight font-display">
+                <h1 className="text-5xl md:text-6xl lg:text-[62px] font-bold text-white leading-[1.05] mb-5 tracking-tight font-display">
                   Controle Total de Custos <br className="hidden lg:block" />
                   e Faturamento
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                <p className="text-base md:text-lg text-white/80 mb-7 leading-relaxed max-w-md mx-auto lg:mx-0">
                   Nosso painel de BI centraliza seus dados e mostra, em tempo real, onde
                   estão os custos e o lucro da sua empresa. Fale agora com um
                   especialista.
                 </p>
 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   <Link
                     to={CTA_LINK}
                     aria-label="Falar com Especialista em BI no WhatsApp"
-                    className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-accent text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-emerald-600 transition-all shadow-[0_20px_40px_-10px_rgba(39,174,96,0.5)] active:scale-95 group"
+                    className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-accent text-white px-8 py-4 rounded-xl font-bold text-base hover:bg-emerald-600 transition-all shadow-[0_20px_40px_-10px_rgba(39,174,96,0.5)] active:scale-95 group"
                   >
                     <span>Falar com Especialista em BI</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <p className="text-[13px] text-white/80">
+                  <p className="text-[13px] text-white/70">
                     ✓ +30 empresas já usam nosso BI &nbsp;|&nbsp; ✓ Diagnóstico gratuito em
                     15 min
                   </p>
