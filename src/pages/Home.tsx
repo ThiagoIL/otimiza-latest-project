@@ -34,7 +34,7 @@ export const Home = () => {
       />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-to-br from-primary to-secondary pt-32 pb-20 lg:py-12">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
+        <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-10 w-full relative z-10">
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
             {/* Text Content (48%) */}
             <div className="w-full lg:w-[38%] text-center lg:text-left space-y-6">

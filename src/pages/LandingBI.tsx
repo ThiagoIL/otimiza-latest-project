@@ -145,21 +145,21 @@ export const LandingBI = () => {
           </div>
         </section>
 
-        {/* TRUST BAR — social proof right after the fold */}
-        <section className="bg-white py-10 border-b border-slate-100">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-              {TRUST_STATS.map((stat) => (
-                <div key={stat.label}>
-                  <p className="text-3xl md:text-4xl font-bold text-accent font-display">
-                    {stat.value}
-                  </p>
-                  <p className="text-xs md:text-sm text-slate-500 font-semibold uppercase tracking-wide mt-1">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
+        {/* PARTNERS — moved right after hero, faster loop */}
+        <section className="py-10 bg-white border-b border-slate-100 overflow-hidden">
+          <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
+            Empresas que confiam na Otimiza+
+          </p>
+          <div className="flex animate-marquee-fast whitespace-nowrap">
+            {[...PARTNERS, ...PARTNERS].map((partner, i) => (
+              <img
+                key={`${partner.id}-${i}`}
+                src={partner.logo}
+                alt={partner.name}
+                className="h-10 mx-10 inline-block object-contain opacity-60 grayscale"
+                loading="lazy"
+              />
+            ))}
           </div>
         </section>
 
@@ -311,21 +311,21 @@ export const LandingBI = () => {
           </div>
         </section>
 
-        {/* PARTNERS */}
-        <section className="py-16 bg-white border-t border-slate-100 overflow-hidden">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-8">
-            Empresas que confiam na Otimiza+
-          </p>
-          <div className="flex animate-marquee-slow whitespace-nowrap">
-            {[...PARTNERS, ...PARTNERS].map((partner, i) => (
-              <img
-                key={`${partner.id}-${i}`}
-                src={partner.logo}
-                alt={partner.name}
-                className="h-10 mx-10 inline-block object-contain opacity-60 grayscale"
-                loading="lazy"
-              />
-            ))}
+        {/* TRUST BAR — moved to where the partners carousel used to be */}
+        <section className="bg-white py-16 border-t border-slate-100">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              {TRUST_STATS.map((stat) => (
+                <div key={stat.label}>
+                  <p className="text-3xl md:text-4xl font-bold text-accent font-display">
+                    {stat.value}
+                  </p>
+                  <p className="text-xs md:text-sm text-slate-500 font-semibold uppercase tracking-wide mt-1">
+                    {stat.label}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

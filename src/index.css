@@ -54,6 +54,10 @@
   animation: marquee 150s linear infinite;
 }
 
+.animate-marquee-fast {
+  animation: marquee 35s linear infinite;
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
