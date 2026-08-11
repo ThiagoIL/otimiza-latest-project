@@ -104,7 +104,7 @@ export const About = () => {
           {/* Methodology */}
           <div className="bg-slate-900 rounded-[3rem] p-12 md:p-20 text-white">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossa Metodologia</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Nossa Metodologia</h2>
               <p className="text-slate-200 max-w-2xl mx-auto">Um processo estruturado para garantir o sucesso da sua transformação digital.</p>
             </div>
             
@@ -117,8 +117,8 @@ export const About = () => {
                 { step: '05', title: 'Monitoramento', desc: 'Acompanhamento de KPIs e melhoria contínua.' }
               ].map((item, index) => (
                 <div key={index} className="relative">
-                  <div className="text-5xl font-bold text-white/10 mb-4">{item.step}</div>
-                  <h4 className="text-xl font-bold mb-2">{item.title}</h4>
+                  <div className="text-5xl font-bold text-white/20 mb-4">{item.step}</div>
+                  <h4 className="text-xl font-bold mb-2 text-white">{item.title}</h4>
                   <p className="text-sm text-slate-200">{item.desc}</p>
                   {index < 4 && (
                     <div className="hidden lg:block absolute top-8 -right-4 w-8 h-px bg-white/10"></div>

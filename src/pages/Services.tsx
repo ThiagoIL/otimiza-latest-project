@@ -98,7 +98,7 @@ export const Services = () => {
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-primary rounded-[3rem] p-12 md:p-16 text-center text-white relative overflow-hidden">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 relative z-10">Precisa de uma solução personalizada?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 relative z-10 text-white">Precisa de uma solução personalizada?</h2>
             <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto relative z-10">
               Nossa equipe está pronta para entender os desafios do seu negócio e propor a melhor estratégia de dados.
             </p>

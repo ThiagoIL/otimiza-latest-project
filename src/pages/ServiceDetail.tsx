@@ -204,9 +204,9 @@ export const ServiceDetail = () => {
               </div>
               
               <div className="mt-12 p-8 bg-slate-900 rounded-3xl text-white">
-                <h3 className="text-xl font-bold mb-4">Dúvidas sobre este serviço?</h3>
+                <h3 className="text-xl font-bold mb-4 text-white">Dúvidas sobre este serviço?</h3>
                 <p className="text-slate-400 mb-6">Nossa equipe técnica está disponível para explicar como esta solução se aplica ao seu modelo de negócio.</p>
-                <Link to="/contato" className="inline-flex items-center font-bold text-primary hover:text-accent transition-colors">
+                <Link to="/contato" className="inline-flex items-center font-bold text-white hover:text-accent transition-colors">
                   Falar com consultor <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>

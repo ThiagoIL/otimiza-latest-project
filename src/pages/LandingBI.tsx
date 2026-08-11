@@ -74,7 +74,7 @@ export const LandingBI = () => {
         {/* Minimal header — logo only, no navigation, single conversion path */}
         <header className="sticky top-0 z-50 bg-[#0B2A5C]/95 backdrop-blur-sm py-4 border-b border-white/10">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center sm:justify-start">
-            <div className="flex items-center space-x-3">
+            <Link to="/" aria-label="Ir para a página inicial da Otimiza+" className="flex items-center space-x-3">
               <div className="w-9 h-9 flex items-center justify-center">
                 <img
                   src="/image/brand/logo.webp"
@@ -88,7 +88,7 @@ export const LandingBI = () => {
               <span className="font-display font-bold text-xl text-white tracking-tighter">
                 Otimiza+
               </span>
-            </div>
+            </Link>
           </div>
         </header>
 

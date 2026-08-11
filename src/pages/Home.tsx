@@ -91,19 +91,19 @@ export const Home = () => {
       </section>
 
       {/* 3 Pillars Section */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-32 bg-white">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-24">
+          <div className="text-center mb-10 md:mb-24">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-display uppercase tracking-widest">Nossos 3 Pilares</h2>
             <div className="h-1.5 w-24 bg-accent mx-auto rounded-full"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
             {/* Pillar 1 */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-neutral-bg p-12 rounded-3xl border-t-4 border-primary shadow-sm flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500"
+              className="bg-neutral-bg p-8 md:p-12 rounded-3xl border-t-4 border-primary shadow-sm flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500"
             >
               <div className="w-20 h-20 bg-white shadow-inner rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                 <LayoutGrid className="w-12 h-12 text-primary" />
@@ -120,7 +120,7 @@ export const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-neutral-bg p-12 rounded-3xl border-t-4 border-secondary shadow-sm flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500"
+              className="bg-neutral-bg p-8 md:p-12 rounded-3xl border-t-4 border-secondary shadow-sm flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500"
             >
               <div className="w-20 h-20 bg-white shadow-inner rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                 <Zap className="w-12 h-12 text-secondary" />
@@ -137,7 +137,7 @@ export const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="bg-neutral-bg p-12 rounded-3xl border-t-4 border-accent shadow-sm flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500"
+              className="bg-neutral-bg p-8 md:p-12 rounded-3xl border-t-4 border-accent shadow-sm flex flex-col items-center text-center group hover:shadow-2xl transition-all duration-500"
             >
               <div className="w-20 h-20 bg-white shadow-inner rounded-3xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
                 <ShieldCheck className="w-12 h-12 text-accent" />
@@ -152,9 +152,9 @@ export const Home = () => {
       </section>
 
       {/* Solutions Section */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-display uppercase tracking-widest">Nossas Soluções</h2>
             <p className="text-text-main max-w-2xl mx-auto">
               Oferecemos um ecossistema completo para a gestão da sua empresa, do operacional ao estratégico.
@@ -192,7 +192,7 @@ export const Home = () => {
       </section>
 
       {/* Differentials Section */}
-      <section className="py-24 bg-primary text-white overflow-hidden relative">
+      <section className="py-16 md:py-24 bg-primary text-white overflow-hidden relative">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -251,8 +251,8 @@ export const Home = () => {
       </section>
 
       {/* Social Proof (Infinite Marquee) */}
-      <section className="py-24 bg-white overflow-hidden">
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-16 text-center">
+      <section className="py-16 md:py-24 bg-white overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 md:mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4 font-display uppercase tracking-widest">Nossos Parceiros Estratégicos</h2>
           <div className="h-1.5 w-16 bg-accent mx-auto rounded-full"></div>
         </div>
@@ -292,7 +292,7 @@ export const Home = () => {
       </section>
 
       {/* Blog Preview */}
-      <section className="py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div>
@@ -357,7 +357,7 @@ export const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-neutral-bg">
+      <section className="py-16 md:py-24 bg-neutral-bg">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-primary to-secondary rounded-[3rem] p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
