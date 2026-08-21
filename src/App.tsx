@@ -20,6 +20,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy').then(m => ({ de
 const TermsOfUse = lazy(() => import('./pages/TermsOfUse').then(m => ({ default: m.TermsOfUse })));
 const ObrigadoWhatsApp = lazy(() => import('./pages/ObrigadoWhatsApp').then(m => ({ default: m.ObrigadoWhatsApp })));
 const LandingBI = lazy(() => import('./pages/LandingBI').then(m => ({ default: m.LandingBI })));
+const LandingSite = lazy(() => import('./pages/LandingSite').then(m => ({ default: m.LandingSite })));
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -55,6 +56,7 @@ const AppShell = () => {
             <Route path="/termos" element={<TermsOfUse />} />
             <Route path="/obrigado-whatsapp" element={<ObrigadoWhatsApp />} />
             <Route path="/lp/bi" element={<LandingBI />} />
+            <Route path="/lp/site" element={<LandingSite />} />
           </Routes>
         </Suspense>
       </main>
