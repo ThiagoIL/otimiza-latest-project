@@ -302,7 +302,7 @@ export const LandingBI = () => {
                   <div className="pt-5 border-t border-slate-100">
                     <p className="font-bold text-[#0B2A5C]">{testimonial.clientName}</p>
                     <p className="text-sm text-slate-500">
-                      {testimonial.company} — {testimonial.sector}
+                      {testimonial.company} · {testimonial.sector}
                     </p>
                   </div>
                 </motion.div>

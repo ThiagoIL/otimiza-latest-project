@@ -33,7 +33,7 @@ const PAIN_POINTS = [
     icon: MousePointerClick,
     title: 'Visitante entra e sai sem virar cliente',
     description:
-      'Um site bonito não basta — sem foco em conversão, cada visita vira uma oportunidade perdida.',
+      'Um site bonito não basta: sem foco em conversão, cada visita vira uma oportunidade perdida.',
   },
   {
     icon: Hourglass,
@@ -59,7 +59,7 @@ const TRUST_STATS = [
   { value: '+30', label: 'Clientes Atendidos' },
   { value: '+1000', label: 'Pessoas Impactadas' },
   { value: '+8', label: 'Anos de Experiência' },
-  { value: 'R$ 3M+', label: 'Em Custos Reduzidos' },
+  { value: '+500', label: 'Leads Gerados' },
 ];
 
 export const LandingSite = () => {
@@ -67,7 +67,7 @@ export const LandingSite = () => {
     <>
       <SEO
         title="Criação de Site Profissional | Feito Para Converter"
-        description="Criamos sites modernos, rápidos e otimizados para buscadores, com foco total em transformar visitantes em clientes. Diagnóstico gratuito em 15 minutos."
+        description="Criamos sites modernos, rápidos e otimizados para buscadores, com foco total em transformar visitantes em clientes. Proposta gratuita em 15 minutos."
         canonical="https://otimizamaisgestao.com/lp/site"
       />
 
@@ -110,11 +110,11 @@ export const LandingSite = () => {
                   Criação de Sites
                 </span>
                 <h1 className="text-5xl md:text-6xl lg:text-[58px] font-bold text-white leading-[1.05] mb-5 tracking-tight font-display">
-                  Um Site Feito Para <br className="hidden lg:block" />
-                  Vender, Não Só Existir
+                  Um Site Que Vende <br className="hidden lg:block" />
+                  Por Você, Todos os Dias
                 </h1>
                 <p className="text-base md:text-lg text-white/80 mb-7 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                  Criamos sites modernos, rápidos e otimizados para buscadores — com foco
+                  Criamos sites modernos, rápidos e otimizados para buscadores, com foco
                   total em transformar cada visita em oportunidade de negócio.
                 </p>
 
@@ -128,7 +128,7 @@ export const LandingSite = () => {
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <p className="text-[13px] text-white/70">
-                    ✓ +30 empresas atendidas &nbsp;|&nbsp; ✓ Diagnóstico gratuito em 15 min
+                    ✓ +30 empresas atendidas &nbsp;|&nbsp; ✓ Proposta gratuita em 15 min
                   </p>
                 </div>
               </motion.div>
@@ -168,7 +168,7 @@ export const LandingSite = () => {
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-[#0B2A5C] mb-4">
-                Isso soa familiar?
+                Sinais de que seu site está afastando clientes
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-lg">
                 Se você se identificou com algum desses pontos, um site bem construído
@@ -213,8 +213,8 @@ export const LandingSite = () => {
                   Um site que trabalha pelo seu negócio
                 </h2>
                 <p className="text-slate-600 text-lg mb-8 leading-relaxed">
-                  Desenvolvemos sites modernos, responsivos e otimizados para mecanismos
-                  de busca (SEO), garantindo uma presença digital forte e profissional
+                  Desenvolvemos sites modernos e de alta performance, prontos para
+                  receber tráfego pago e transformar cada clique em lead qualificado
                   para o seu negócio.
                 </p>
                 <ul className="space-y-4 mb-10">
@@ -227,10 +227,10 @@ export const LandingSite = () => {
                 </ul>
                 <Link
                   to={CTA_LINK}
-                  aria-label="Quero um diagnóstico gratuito"
+                  aria-label="Quero uma proposta gratuita"
                   className="inline-flex items-center justify-center space-x-3 bg-[#0B2A5C] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#071D42] transition-all active:scale-95 group"
                 >
-                  <span>Quero um diagnóstico gratuito</span>
+                  <span>Quero uma proposta gratuita</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
@@ -302,7 +302,7 @@ export const LandingSite = () => {
                   <div className="pt-5 border-t border-slate-100">
                     <p className="font-bold text-[#0B2A5C]">{testimonial.clientName}</p>
                     <p className="text-sm text-slate-500">
-                      {testimonial.company} — {testimonial.sector}
+                      {testimonial.company} · {testimonial.sector}
                     </p>
                   </div>
                 </motion.div>
@@ -334,7 +334,7 @@ export const LandingSite = () => {
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[100px]" />
           <div className="max-w-[800px] mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">
-              Agende seu diagnóstico gratuito esta semana
+              Agende sua proposta gratuita esta semana
             </h2>
             <p className="text-white/90 text-lg mb-10">
               15 minutos de conversa pra entender como um site novo pode gerar mais

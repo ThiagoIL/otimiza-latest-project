@@ -277,6 +277,7 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 export const PARTNERS: Partner[] = [
+  { id: '18', name: 'Implementos Vicunha', logo: '/image/partners/logo18.png' },
   { id: '1', name: 'Parceiro 1', logo: '/image/partners/logo1.png' },
   { id: '2', name: 'Parceiro 2', logo: '/image/partners/logo2.png' },
   { id: '3', name: 'Parceiro 3', logo: '/image/partners/logo3.png' },
@@ -291,7 +292,6 @@ export const PARTNERS: Partner[] = [
   { id: '14', name: 'Parceiro 14', logo: '/image/partners/logo14.png' },
   { id: '15', name: 'Parceiro 15', logo: '/image/partners/logo15.png' },
   { id: '17', name: 'Parceiro 17', logo: '/image/partners/logo17.png' },
-  { id: '18', name: 'Parceiro 18', logo: '/image/partners/logo18.png' },
   { id: '19', name: 'Parceiro 19', logo: '/image/partners/logo19.png' },
   { id: '20', name: 'Parceiro 20', logo: '/image/partners/logo20.png' },
   { id: '21', name: 'VSG', logo: '/image/partners/logo21.png' },
