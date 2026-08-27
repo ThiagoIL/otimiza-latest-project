@@ -4,9 +4,6 @@ import { motion } from 'motion/react';
 import {
   ArrowRight,
   CheckCircle2,
-  SearchX,
-  MousePointerClick,
-  Hourglass,
   Smartphone,
   Gauge,
   Search,
@@ -16,32 +13,13 @@ import {
 import { PARTNERS, SUCCESS_CASES } from '../data';
 import { SEO } from '../components/SEO';
 import { CaseCarousel } from '../components/CaseCarousel';
+import { PainJourney } from '../components/PainJourney';
+import { TemplateGallery } from '../components/TemplateGallery';
 
 const WHATSAPP_MSG = encodeURIComponent(
   'Olá, vim do anúncio e quero saber mais sobre criação de site com a Otimiza+'
 );
 const CTA_LINK = `/obrigado-whatsapp?text=${WHATSAPP_MSG}`;
-
-const PAIN_POINTS = [
-  {
-    icon: SearchX,
-    title: 'Seu site não aparece no Google',
-    description:
-      'Sem otimização para buscadores, quem procura pelo que você vende simplesmente não te encontra.',
-  },
-  {
-    icon: MousePointerClick,
-    title: 'Visitante entra e sai sem virar cliente',
-    description:
-      'Um site bonito não basta: sem foco em conversão, cada visita vira uma oportunidade perdida.',
-  },
-  {
-    icon: Hourglass,
-    title: 'Site lento, quebrado ou desatualizado',
-    description:
-      'Carregamento lento e layout que não funciona no celular afastam o visitante antes mesmo de ele ler a primeira frase.',
-  },
-];
 
 const SITE_BENEFITS = [
   'Design moderno e 100% responsivo (celular, tablet e desktop)',
@@ -164,9 +142,18 @@ export const LandingSite = () => {
         </section>
 
         {/* PAIN POINTS */}
-        <section className="py-20 md:py-24 bg-neutral-bg">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+        <section className="py-20 md:py-24 bg-neutral-bg relative overflow-hidden">
+          <div className="absolute top-10 -left-24 w-72 h-72 bg-red-200/25 rounded-full blur-[100px] animate-float" />
+          <div className="absolute bottom-0 -right-24 w-72 h-72 bg-[#0F5FDC]/10 rounded-full blur-[100px] animate-float-delayed" />
+
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="text-center mb-16"
+            >
               <h2 className="text-3xl md:text-4xl font-bold text-[#0B2A5C] mb-4">
                 Sinais de que seu site está afastando clientes
               </h2>
@@ -174,25 +161,8 @@ export const LandingSite = () => {
                 Se você se identificou com algum desses pontos, um site bem construído
                 resolve na raiz.
               </p>
-            </div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {PAIN_POINTS.map((pain, i) => (
-                <motion.div
-                  key={pain.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="bg-white rounded-2xl p-8 border border-slate-100 shadow-sm card-hover"
-                >
-                  <div className="w-14 h-14 rounded-xl bg-red-50 flex items-center justify-center mb-6">
-                    <pain.icon className="w-7 h-7 text-red-500" />
-                  </div>
-                  <h3 className="text-xl font-bold text-[#0B2A5C] mb-3">{pain.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">{pain.description}</p>
-                </motion.div>
-              ))}
-            </div>
+            </motion.div>
+            <PainJourney />
           </div>
         </section>
 
@@ -275,6 +245,27 @@ export const LandingSite = () => {
                 </div>
               </motion.div>
             </div>
+          </div>
+        </section>
+
+        {/* TEMPLATES */}
+        <section className="py-20 md:py-24 bg-white">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <span className="inline-block bg-[#0F5FDC]/10 text-[#0F5FDC] rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5">
+                Projetos Reais
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0B2A5C] mb-4">
+                Alguns projetos que já colocamos no ar
+              </h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+                Sites e sistemas web reais, entregues pra clientes de verdade — do
+                institucional que converte visita em matrícula ao painel que organiza a
+                operação inteira.
+              </p>
+            </div>
+
+            <TemplateGallery ctaLink={CTA_LINK} />
           </div>
         </section>
 
