@@ -10,8 +10,10 @@ interface Project {
   tags: string;
   desktopSrc: string;
   desktopAlt: string;
+  desktopAspect?: string;
   mobileSrc: string;
   mobileAlt: string;
+  mobileAspect?: string;
 }
 
 // Real client work — same screenshots used in the hero carousel — so the
@@ -46,6 +48,18 @@ const PROJECTS: Project[] = [
     desktopAlt: 'Sistema de gestão da qualidade (SGQ) desenvolvido pela Otimiza+ para a BNB Flex',
     mobileSrc: '',
     mobileAlt: '',
+  },
+  {
+    id: 'tl-solucoes',
+    label: 'TL Soluções · Redes',
+    title: 'Site institucional para empresa de redes e infraestrutura',
+    tags: 'SITE INSTITUCIONAL · TI & REDES',
+    desktopSrc: '/image/cases/case-tl-solucoes-desktop.png',
+    desktopAlt: 'Site institucional da TL Soluções em Redes de Computadores, desenvolvido pela Otimiza+',
+    desktopAspect: '1347/769',
+    mobileSrc: '/image/cases/case-tl-solucoes-mobile.png',
+    mobileAlt: 'Versão mobile do site da TL Soluções em Redes de Computadores',
+    mobileAspect: '352/651',
   },
 ];
 
@@ -83,7 +97,7 @@ const ProjectCard = ({ project, ctaLink, index }: { project: Project; ctaLink: s
         {/* Phone frame, overlapping bottom-right — only when a mobile shot exists */}
         {project.mobileSrc && (
           <div className="absolute -bottom-2 right-4 w-14 rounded-[0.7rem] border-[3px] border-slate-900 bg-slate-900 shadow-xl overflow-hidden">
-            <div className="aspect-[720/1600] overflow-hidden">
+            <div className="overflow-hidden" style={{ aspectRatio: project.mobileAspect ?? '720/1600' }}>
               <img
                 src={project.mobileSrc}
                 alt={project.mobileAlt}

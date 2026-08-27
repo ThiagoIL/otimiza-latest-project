@@ -7,12 +7,15 @@ interface LaptopMockupProps {
   badge?: string;
   /** Client/company name shown under the badge label */
   clientName?: string;
+  /** CSS aspect-ratio for the screenshot (e.g. "1902/939"). Match the
+   *  screenshot's real ratio so object-cover doesn't crop away content. */
+  aspect?: string;
 }
 
 // Realistic laptop frame (front-facing, MacBook-style) that wraps a real
 // product screenshot, used to showcase an actual case/client project in a
 // hero — as opposed to `SiteMockup`, which is a generic illustrative shape.
-export const LaptopMockup = ({ src, alt, badge, clientName }: LaptopMockupProps) => {
+export const LaptopMockup = ({ src, alt, badge, clientName, aspect = '1902/939' }: LaptopMockupProps) => {
   return (
     <div className="relative w-full max-w-2xl mx-auto">
       {/* Screen */}
@@ -21,12 +24,10 @@ export const LaptopMockup = ({ src, alt, badge, clientName }: LaptopMockupProps)
         <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-slate-700" />
 
         {/* Screenshot */}
-        <div className="relative rounded-md overflow-hidden bg-white aspect-[1902/939]">
+        <div className="relative rounded-md overflow-hidden bg-white" style={{ aspectRatio: aspect }}>
           <img
             src={src}
             alt={alt}
-            width="1902"
-            height="939"
             className="w-full h-full object-cover object-top"
             loading="eager"
             referrerPolicy="no-referrer"
