@@ -58,6 +58,27 @@
   animation: marquee 35s linear infinite;
 }
 
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
+
+/* For a track made of exactly 2 duplicated copies, the loop must translate
+   by half the track's own width (one copy-width), not the full track —
+   otherwise the whole track scrolls completely out of view before
+   snapping back, which reads as the marquee "running out" mid-loop. */
+@keyframes marquee-half {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-row {
+  animation: marquee-half 60s linear infinite;
+}
+
+.animate-marquee-row-reverse {
+  animation: marquee-half 68s linear infinite reverse;
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }

@@ -249,7 +249,7 @@ export const LandingSite = () => {
         </section>
 
         {/* TEMPLATES */}
-        <section className="py-20 md:py-24 bg-white">
+        <section className="py-20 md:py-24 bg-white overflow-hidden">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <span className="inline-block bg-[#0F5FDC]/10 text-[#0F5FDC] rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5">
@@ -264,9 +264,10 @@ export const LandingSite = () => {
                 operação inteira.
               </p>
             </div>
-
-            <TemplateGallery ctaLink={CTA_LINK} />
           </div>
+
+          {/* Full-bleed marquee, outside the max-width column on purpose */}
+          <TemplateGallery ctaLink={CTA_LINK} />
         </section>
 
         {/* TESTIMONIALS */}
