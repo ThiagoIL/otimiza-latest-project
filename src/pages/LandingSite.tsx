@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { PARTNERS, SUCCESS_CASES } from '../data';
 import { SEO } from '../components/SEO';
-import { SiteMockup } from '../components/SiteMockup';
+import { CaseCarousel } from '../components/CaseCarousel';
 
 const WHATSAPP_MSG = encodeURIComponent(
   'Olá, vim do anúncio e quero saber mais sobre criação de site com a Otimiza+'
@@ -109,13 +109,13 @@ export const LandingSite = () => {
                 <span className="inline-block bg-accent/15 text-accent border border-accent/30 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5">
                   Criação de Sites
                 </span>
-                <h1 className="text-5xl md:text-6xl lg:text-[58px] font-bold text-white leading-[1.05] mb-5 tracking-tight font-display">
-                  Um Site Que Vende <br className="hidden lg:block" />
-                  Por Você, Todos os Dias
+                <h1 className="text-4xl md:text-5xl lg:text-[44px] font-bold text-white leading-[1.15] mb-5 tracking-tight font-display">
+                  Seu site antigo não traz clientes? <br className="hidden lg:block" />
+                  Nós criamos páginas prontas para converter visitantes em vendas.
                 </h1>
                 <p className="text-base md:text-lg text-white/80 mb-7 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                  Criamos sites modernos, rápidos e otimizados para buscadores, com foco
-                  total em transformar cada visita em oportunidade de negócio.
+                  Desenvolvimento profissional com foco total em SEO e alta conversão.
+                  Coloque sua empresa nas primeiras buscas do Google.
                 </p>
 
                 <div className="space-y-3">
@@ -139,7 +139,7 @@ export const LandingSite = () => {
                 transition={{ duration: 0.9, delay: 0.2 }}
                 className="w-full lg:w-[62%] flex justify-center lg:justify-end pb-8 sm:pb-0"
               >
-                <SiteMockup />
+                <CaseCarousel />
               </motion.div>
             </div>
           </div>
@@ -244,30 +244,33 @@ export const LandingSite = () => {
               >
                 <div className="bg-neutral-bg rounded-2xl p-6 border border-slate-100">
                   <Smartphone className="w-8 h-8 text-[#0F5FDC] mb-4" />
-                  <p className="font-bold text-[#0B2A5C] mb-1">100% Responsivo</p>
+                  <p className="font-bold text-[#0B2A5C] mb-1">Experiência Perfeita no Celular</p>
                   <p className="text-sm text-slate-500">
-                    Perfeito em qualquer tela, do celular ao desktop.
+                    Mais de 80% dos seus acessos vêm do smartphone; garantimos navegação
+                    fluida em qualquer tela.
                   </p>
                 </div>
                 <div className="bg-neutral-bg rounded-2xl p-6 border border-slate-100 mt-8">
                   <Search className="w-8 h-8 text-accent mb-4" />
-                  <p className="font-bold text-[#0B2A5C] mb-1">SEO desde o Início</p>
+                  <p className="font-bold text-[#0B2A5C] mb-1">Pronto para o Google</p>
                   <p className="text-sm text-slate-500">
-                    Estruturado para ser encontrado no Google.
+                    Estrutura otimizada para sua empresa ser encontrada por quem já procura
+                    pelo seu serviço.
                   </p>
                 </div>
                 <div className="bg-neutral-bg rounded-2xl p-6 border border-slate-100">
                   <Gauge className="w-8 h-8 text-[#0B2A5C] mb-4" />
-                  <p className="font-bold text-[#0B2A5C] mb-1">Alta Performance</p>
+                  <p className="font-bold text-[#0B2A5C] mb-1">Velocidade Extrema</p>
                   <p className="text-sm text-slate-500">
-                    Carregamento rápido, sem enrolação.
+                    Carregamento em menos de 2 segundos para não perder nenhum cliente.
                   </p>
                 </div>
                 <div className="bg-neutral-bg rounded-2xl p-6 border border-slate-100 mt-8">
                   <Target className="w-8 h-8 text-red-500 mb-4" />
-                  <p className="font-bold text-[#0B2A5C] mb-1">Foco em Conversão</p>
+                  <p className="font-bold text-[#0B2A5C] mb-1">Feito para Converter</p>
                   <p className="text-sm text-slate-500">
-                    Cada seção pensada para gerar contato.
+                    Botões e textos posicionados estrategicamente para transformar cada
+                    visita em contato real.
                   </p>
                 </div>
               </motion.div>
@@ -337,8 +340,8 @@ export const LandingSite = () => {
               Agende sua proposta gratuita esta semana
             </h2>
             <p className="text-white/90 text-lg mb-10">
-              15 minutos de conversa pra entender como um site novo pode gerar mais
-              clientes pro seu negócio. Sem compromisso.
+              Sem compromisso. Analisamos seu site atual e te mostramos onde você está
+              perdendo dinheiro.
             </p>
             <Link
               to={CTA_LINK}
@@ -348,6 +351,9 @@ export const LandingSite = () => {
               <span>Falar com Especialista em Sites</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
+            <p className="text-[13px] text-white/70 mt-5">
+              ✓ +30 empresas atendidas &nbsp;|&nbsp; ✓ Resposta em até 15 min
+            </p>
           </div>
         </section>
 
