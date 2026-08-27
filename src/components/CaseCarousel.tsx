@@ -45,6 +45,12 @@ const CASES: CaseItem[] = [
     mobileAspect: '352/651',
     clientName: 'Site desenvolvido para TL Soluções em Redes',
   },
+  {
+    desktopSrc: '/image/cases/case-giro-estoque-desktop.jpg',
+    desktopAlt: 'Sistema Giro Estoque, consulta de estoques entre empresas do setor moveleiro, desenvolvido pela Otimiza+',
+    desktopAspect: '1729/943',
+    clientName: 'Sistema desenvolvido para Giro Estoque',
+  },
 ];
 
 const N = CASES.length;

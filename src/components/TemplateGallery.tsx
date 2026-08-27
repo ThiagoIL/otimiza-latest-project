@@ -1,137 +1,146 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 
 interface Project {
   id: string;
   label: string;
-  title: string;
-  tags: string;
   desktopSrc: string;
   desktopAlt: string;
-  desktopAspect?: string;
-  mobileSrc: string;
-  mobileAlt: string;
-  mobileAspect?: string;
+  bg: string;
+  tiltY: number;
+  tiltX: number;
 }
 
 // Real client work — same screenshots used in the hero carousel — so the
-// gallery shows what we actually deliver instead of generic placeholders.
+// marquee shows what we actually deliver instead of generic placeholders.
 const PROJECTS: Project[] = [
   {
     id: 'educart',
     label: 'EDUCART · Reforço Escolar',
-    title: 'Site institucional pensado pra converter matrícula',
-    tags: 'SITE INSTITUCIONAL · EDUCAÇÃO',
     desktopSrc: '/image/cases/case-educart-desktop.png',
     desktopAlt: 'Site institucional do EDUCART, reforço escolar, desenvolvido pela Otimiza+',
-    mobileSrc: '/image/cases/case-educart-mobile.jpg',
-    mobileAlt: 'Versão mobile do site do EDUCART',
+    bg: 'linear-gradient(135deg, #f472b6 0%, #fb923c 100%)',
+    tiltY: -8,
+    tiltX: 3,
   },
   {
     id: 'ti-demandas',
     label: 'TI Demandas · Painel Executivo',
-    title: 'Sistema web de chamados e indicadores para times de TI',
-    tags: 'SISTEMA WEB · GESTÃO DE TI',
     desktopSrc: '/image/cases/case-ti-demandas-desktop.png',
     desktopAlt: 'Painel executivo do sistema TI Demandas desenvolvido pela Otimiza+',
-    mobileSrc: '/image/cases/case-ti-demandas-mobile.jpg',
-    mobileAlt: 'Versão mobile do sistema TI Demandas',
+    bg: 'linear-gradient(135deg, #1e293b 0%, #0f172a 100%)',
+    tiltY: 9,
+    tiltX: -3,
   },
   {
     id: 'bnb-flex',
     label: 'BNB Flex · SGQ',
-    title: 'Sistema de gestão da qualidade sob medida',
-    tags: 'SISTEMA WEB · GESTÃO DA QUALIDADE',
     desktopSrc: '/image/cases/case-bnb-flex-sgq.jpg',
     desktopAlt: 'Sistema de gestão da qualidade (SGQ) desenvolvido pela Otimiza+ para a BNB Flex',
-    mobileSrc: '',
-    mobileAlt: '',
+    bg: 'linear-gradient(135deg, #0B2A5C 0%, #0F5FDC 100%)',
+    tiltY: -7,
+    tiltX: -3,
   },
   {
     id: 'tl-solucoes',
     label: 'TL Soluções · Redes',
-    title: 'Site institucional para empresa de redes e infraestrutura',
-    tags: 'SITE INSTITUCIONAL · TI & REDES',
     desktopSrc: '/image/cases/case-tl-solucoes-desktop.png',
     desktopAlt: 'Site institucional da TL Soluções em Redes de Computadores, desenvolvido pela Otimiza+',
-    desktopAspect: '1347/769',
-    mobileSrc: '/image/cases/case-tl-solucoes-mobile.png',
-    mobileAlt: 'Versão mobile do site da TL Soluções em Redes de Computadores',
-    mobileAspect: '352/651',
+    bg: 'linear-gradient(135deg, #0f172a 0%, #164e63 100%)',
+    tiltY: 8,
+    tiltX: 3,
+  },
+  {
+    id: 'giro-estoque',
+    label: 'Giro Estoque · Sindimóveis',
+    desktopSrc: '/image/cases/case-giro-estoque-desktop.jpg',
+    desktopAlt: 'Sistema Giro Estoque, consulta de estoques entre empresas do setor moveleiro, desenvolvido pela Otimiza+',
+    bg: 'linear-gradient(135deg, #fb923c 0%, #ea580c 100%)',
+    tiltY: -9,
+    tiltX: 2,
   },
 ];
 
-const ProjectCard = ({ project, ctaLink, index }: { project: Project; ctaLink: string; index: number }) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group bg-white rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col"
-    >
-      <div className="relative p-4 pb-8 bg-neutral-bg">
-        {/* Browser frame */}
-        <div className="rounded-lg overflow-hidden shadow-lg border border-slate-200/70 bg-white">
-          <div className="flex items-center gap-1.5 bg-slate-100 px-3 py-2 border-b border-slate-200">
-            <span className="w-2 h-2 rounded-full bg-red-300" />
-            <span className="w-2 h-2 rounded-full bg-yellow-300" />
-            <span className="w-2 h-2 rounded-full bg-green-300" />
-            <div className="ml-2 flex-1 bg-white rounded text-[9px] font-semibold text-slate-500 px-2 py-0.5 border border-slate-200 truncate">
-              {project.label}
-            </div>
-          </div>
-          <div className="aspect-[16/10] overflow-hidden">
-            <img
-              src={project.desktopSrc}
-              alt={project.desktopAlt}
-              className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-              loading="lazy"
-              referrerPolicy="no-referrer"
-            />
-          </div>
+// Exactly 2 copies per row — the marquee-half keyframe translates by half
+// the track's width, which only lines up seamlessly with 2 copies (see
+// index.css). More copies wouldn't add variety (the visible sequence still
+// repeats every 1 copy-width either way), just a longer loop before repeat.
+const ROW_1 = [...PROJECTS, ...PROJECTS];
+const ROW_2_BASE = [...PROJECTS].reverse();
+const ROW_2 = [...ROW_2_BASE, ...ROW_2_BASE];
+
+const ProjectCard = ({ project, ctaLink }: { project: Project; ctaLink: string }) => (
+  <Link
+    to={ctaLink}
+    aria-label={`Quero um site como o da ${project.label}`}
+    className="group relative shrink-0 w-[260px] md:w-[320px] mx-3 rounded-2xl overflow-hidden shadow-xl"
+    style={{ background: project.bg }}
+  >
+    <div className="flex items-center justify-center h-[190px] md:h-[230px] px-8">
+      <div
+        className="w-full rounded-lg overflow-hidden shadow-2xl border border-white/10 bg-white transition-transform duration-500 ease-out group-hover:!rotate-0 group-hover:scale-105"
+        style={{ transform: `perspective(900px) rotateY(${project.tiltY}deg) rotateX(${project.tiltX}deg)` }}
+      >
+        <div className="flex items-center gap-1.5 bg-slate-100 px-2.5 py-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-red-300" />
+          <span className="w-1.5 h-1.5 rounded-full bg-yellow-300" />
+          <span className="w-1.5 h-1.5 rounded-full bg-green-300" />
         </div>
-
-        {/* Phone frame, overlapping bottom-right — only when a mobile shot exists */}
-        {project.mobileSrc && (
-          <div className="absolute -bottom-2 right-4 w-14 rounded-[0.7rem] border-[3px] border-slate-900 bg-slate-900 shadow-xl overflow-hidden">
-            <div className="overflow-hidden" style={{ aspectRatio: project.mobileAspect ?? '720/1600' }}>
-              <img
-                src={project.mobileSrc}
-                alt={project.mobileAlt}
-                className="w-full h-full object-cover object-top"
-                loading="lazy"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-          </div>
-        )}
+        <div className="aspect-[16/10] overflow-hidden">
+          <img
+            src={project.desktopSrc}
+            alt={project.desktopAlt}
+            className="w-full h-full object-cover object-top"
+            loading="lazy"
+            referrerPolicy="no-referrer"
+          />
+        </div>
       </div>
+    </div>
 
-      <div className="p-6 pt-5 flex flex-col flex-1">
-        <p className="text-[11px] font-bold text-secondary tracking-widest mb-2">{project.tags}</p>
-        <h3 className="text-base font-bold text-primary mb-5 leading-snug flex-1">{project.title}</h3>
-        <Link
-          to={ctaLink}
-          aria-label={`Quero um projeto como: ${project.title}`}
-          className="inline-flex items-center justify-center space-x-2 bg-primary text-white px-5 py-3 rounded-xl font-bold text-sm hover:bg-[#071D42] transition-all active:scale-95 group/btn w-full"
-        >
-          <span>Quero um projeto assim</span>
-          <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-        </Link>
-      </div>
-    </motion.div>
-  );
-};
+    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-4 px-5">
+      <p className="text-white text-sm font-bold drop-shadow">{project.label}</p>
+    </div>
+  </Link>
+);
+
+const MarqueeRow = ({
+  projects,
+  ctaLink,
+  animationClass,
+}: {
+  projects: Project[];
+  ctaLink: string;
+  animationClass: string;
+}) => (
+  <div className="overflow-hidden">
+    <div className={`flex w-max ${animationClass} pause-on-hover`}>
+      {projects.map((project, i) => (
+        <ProjectCard key={`${project.id}-${i}`} project={project} ctaLink={ctaLink} />
+      ))}
+    </div>
+  </div>
+);
 
 export const TemplateGallery = ({ ctaLink }: { ctaLink: string }) => {
   return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {PROJECTS.map((project, i) => (
-        <ProjectCard key={project.id} project={project} ctaLink={ctaLink} index={i} />
-      ))}
+    <div>
+      <div className="space-y-6">
+        <MarqueeRow projects={ROW_1} ctaLink={ctaLink} animationClass="animate-marquee-row" />
+        <MarqueeRow projects={ROW_2} ctaLink={ctaLink} animationClass="animate-marquee-row-reverse" />
+      </div>
+
+      <div className="text-center mt-12">
+        <Link
+          to={ctaLink}
+          aria-label="Quero um projeto assim"
+          className="inline-flex items-center justify-center space-x-3 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-[#071D42] transition-all active:scale-95 group"
+        >
+          <span>Quero um projeto assim</span>
+          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
     </div>
   );
 };
