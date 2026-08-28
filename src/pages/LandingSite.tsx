@@ -101,8 +101,8 @@ export const LandingSite = () => {
                   <span className="text-accent">colocar sua empresa no Google e vender mais.</span>
                 </h1>
                 <p className="text-base md:text-lg text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto">
-                  Site pronto pra usar, otimizado pra aparecer no Google e fácil de manter
-                  no dia a dia, sem dor de cabeça pra sua empresa.
+                  Criamos seu site do zero e deixamos tudo pronto para você ser encontrado
+                  no Google. Sem termos técnicos difíceis e super fácil de mexer.
                 </p>
 
                 <div>
