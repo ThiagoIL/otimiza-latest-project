@@ -90,7 +90,7 @@ export const CaseCarousel = () => {
 
   return (
     <div
-      className="w-full max-w-2xl mx-auto"
+      className="w-full max-w-4xl mx-auto"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -122,7 +122,7 @@ export const CaseCarousel = () => {
                   initial={{ opacity: 0, x: 12, y: 12 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   transition={{ duration: 0.45, delay: 0.25 }}
-                  className="hidden sm:block absolute -bottom-10 -right-6 md:-right-10 w-24 md:w-32 z-20"
+                  className="hidden sm:block absolute -bottom-12 -right-8 md:-right-14 w-28 md:w-40 z-20"
                 >
                   <div
                     className="rounded-[1.1rem] border-[3px] border-slate-900 bg-slate-900 overflow-hidden shadow-2xl"

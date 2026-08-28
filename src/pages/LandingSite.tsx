@@ -86,21 +86,21 @@ export const LandingSite = () => {
           <div className="absolute bottom-0 -left-20 w-96 h-96 bg-white/5 rounded-full blur-[100px]" />
 
           <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-            <div className="flex flex-col lg:flex-row items-center lg:items-start gap-14">
+            <div className="flex flex-col items-center text-center gap-10">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className="w-full lg:w-[38%] text-center lg:text-left"
+                className="w-full max-w-3xl"
               >
                 <span className="inline-block bg-accent/15 text-accent border border-accent/30 rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest mb-5">
                   Criação de Sites
                 </span>
-                <h1 className="text-4xl md:text-5xl lg:text-[44px] font-bold text-white leading-[1.15] mb-5 tracking-tight font-display">
+                <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-white leading-[1.15] mb-6 tracking-tight font-display">
                   Criação de sites, landing pages e sistemas web prontos para{' '}
                   <span className="text-accent">colocar sua empresa no Google e vender mais.</span>
                 </h1>
-                <p className="text-base md:text-lg text-white/80 mb-7 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                <p className="text-base md:text-lg text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto">
                   Site pronto pra usar, otimizado pra aparecer no Google e fácil de manter
                   no dia a dia, sem dor de cabeça pra sua empresa.
                 </p>
@@ -121,7 +121,7 @@ export const LandingSite = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.9, delay: 0.2 }}
-                className="w-full lg:w-[62%] flex justify-center lg:justify-end pb-8 sm:pb-0"
+                className="w-full flex justify-center pb-8 sm:pb-0"
               >
                 <CaseCarousel />
               </motion.div>
@@ -132,7 +132,7 @@ export const LandingSite = () => {
               below, full-bleed for extra movement/impact. */}
           <div className="relative z-10 mt-16 md:mt-20 border-t border-white/10 pt-6 overflow-hidden">
             <div className="flex w-max animate-marquee-ticker">
-              {[...HERO_TICKER, ...HERO_TICKER].map((item, i) => (
+              {[...HERO_TICKER, ...HERO_TICKER, ...HERO_TICKER, ...HERO_TICKER].map((item, i) => (
                 <span
                   key={i}
                   className="flex items-center text-white/50 text-xs font-bold uppercase tracking-[0.2em] whitespace-nowrap"
@@ -142,24 +142,6 @@ export const LandingSite = () => {
                 </span>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* PARTNERS */}
-        <section className="py-10 bg-white border-b border-slate-100 overflow-hidden">
-          <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
-            Empresas que confiam na Otimiza+
-          </p>
-          <div className="flex animate-marquee-fast whitespace-nowrap">
-            {[...PARTNERS, ...PARTNERS].map((partner, i) => (
-              <img
-                key={`${partner.id}-${i}`}
-                src={partner.logo}
-                alt={partner.name}
-                className="h-10 mx-10 inline-block object-contain opacity-60 grayscale"
-                loading="lazy"
-              />
-            ))}
           </div>
         </section>
 
@@ -325,6 +307,24 @@ export const LandingSite = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* PARTNERS */}
+        <section className="py-10 bg-white border-b border-slate-100 overflow-hidden">
+          <p className="text-center text-xs font-bold uppercase tracking-widest text-slate-400 mb-6">
+            Empresas que confiam na Otimiza+
+          </p>
+          <div className="flex animate-marquee-fast whitespace-nowrap">
+            {[...PARTNERS, ...PARTNERS].map((partner, i) => (
+              <img
+                key={`${partner.id}-${i}`}
+                src={partner.logo}
+                alt={partner.name}
+                className="h-10 mx-10 inline-block object-contain opacity-60 grayscale"
+                loading="lazy"
+              />
+            ))}
           </div>
         </section>
 

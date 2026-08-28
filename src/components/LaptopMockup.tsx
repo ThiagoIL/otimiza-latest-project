@@ -17,7 +17,7 @@ interface LaptopMockupProps {
 // hero — as opposed to `SiteMockup`, which is a generic illustrative shape.
 export const LaptopMockup = ({ src, alt, badge, clientName, aspect = '1902/939' }: LaptopMockupProps) => {
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div className="relative w-full max-w-4xl mx-auto">
       {/* Screen */}
       <div className="relative rounded-t-2xl rounded-b-[6px] bg-slate-900 pt-3 px-3 pb-3.5 md:pt-3.5 md:px-3.5 md:pb-4 shadow-2xl">
         {/* Camera notch */}
