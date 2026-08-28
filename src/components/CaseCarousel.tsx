@@ -16,7 +16,7 @@ interface CaseItem {
 const CASES: CaseItem[] = [
   {
     desktopSrc: '/image/cases/case-educart-desktop.png',
-    desktopAlt: 'Site institucional do EDUCART — reforço escolar — desenvolvido pela Otimiza+',
+    desktopAlt: 'Site institucional do EDUCART, reforço escolar, desenvolvido pela Otimiza+',
     desktopAspect: '1915/913',
     mobileSrc: '/image/cases/case-educart-mobile.jpg',
     mobileAlt: 'Versão mobile do site do EDUCART',
