@@ -259,7 +259,7 @@ export const LandingSite = () => {
                 Alguns projetos que já colocamos no ar
               </h2>
               <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-                Sites e sistemas web reais, entregues pra clientes de verdade — do
+                Sites e sistemas web reais, entregues pra clientes de verdade: do
                 institucional que converte visita em matrícula ao painel que organiza a
                 operação inteira.
               </p>
