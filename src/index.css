@@ -79,6 +79,10 @@
   animation: marquee-half 68s linear infinite reverse;
 }
 
+.animate-marquee-ticker {
+  animation: marquee-half 26s linear infinite;
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }

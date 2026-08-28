@@ -21,6 +21,15 @@ const WHATSAPP_MSG = encodeURIComponent(
 );
 const CTA_LINK = `/obrigado-whatsapp?text=${WHATSAPP_MSG}`;
 
+const HERO_TICKER = [
+  'Sites Institucionais',
+  'Landing Pages',
+  'Sistemas Web',
+  'SEO Técnico',
+  'Performance',
+  'Suporte Contínuo',
+];
+
 const SITE_BENEFITS = [
   'Design moderno e 100% responsivo (celular, tablet e desktop)',
   'Otimização para mecanismos de busca (SEO) desde o primeiro dia',
@@ -88,15 +97,15 @@ export const LandingSite = () => {
                   Criação de Sites
                 </span>
                 <h1 className="text-4xl md:text-5xl lg:text-[44px] font-bold text-white leading-[1.15] mb-5 tracking-tight font-display">
-                  Seu site antigo não traz clientes? <br className="hidden lg:block" />
-                  Nós criamos páginas prontas para converter visitantes em vendas.
+                  Criação de sites, landing pages e sistemas web prontos para{' '}
+                  <span className="text-accent">colocar sua empresa no Google e vender mais.</span>
                 </h1>
                 <p className="text-base md:text-lg text-white/80 mb-7 leading-relaxed max-w-lg mx-auto lg:mx-0">
-                  Desenvolvimento profissional com foco total em SEO e alta conversão.
-                  Coloque sua empresa nas primeiras buscas do Google.
+                  Site pronto pra usar, otimizado pra aparecer no Google e fácil de manter
+                  no dia a dia, sem dor de cabeça pra sua empresa.
                 </p>
 
-                <div className="space-y-3">
+                <div>
                   <Link
                     to={CTA_LINK}
                     aria-label="Falar com Especialista em Sites no WhatsApp"
@@ -105,9 +114,6 @@ export const LandingSite = () => {
                     <span>Falar com Especialista em Sites</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                  <p className="text-[13px] text-white/70">
-                    ✓ +30 empresas atendidas &nbsp;|&nbsp; ✓ Proposta gratuita em 15 min
-                  </p>
                 </div>
               </motion.div>
 
@@ -119,6 +125,22 @@ export const LandingSite = () => {
               >
                 <CaseCarousel />
               </motion.div>
+            </div>
+          </div>
+
+          {/* Capability ticker — bridges the hero into the real projects
+              below, full-bleed for extra movement/impact. */}
+          <div className="relative z-10 mt-16 md:mt-20 border-t border-white/10 pt-6 overflow-hidden">
+            <div className="flex w-max animate-marquee-ticker">
+              {[...HERO_TICKER, ...HERO_TICKER].map((item, i) => (
+                <span
+                  key={i}
+                  className="flex items-center text-white/50 text-xs font-bold uppercase tracking-[0.2em] whitespace-nowrap"
+                >
+                  {item}
+                  <span className="mx-6 text-accent/70">•</span>
+                </span>
+              ))}
             </div>
           </div>
         </section>
@@ -197,10 +219,10 @@ export const LandingSite = () => {
                 </ul>
                 <Link
                   to={CTA_LINK}
-                  aria-label="Quero uma proposta gratuita"
+                  aria-label="Falar com um Especialista"
                   className="inline-flex items-center justify-center space-x-3 bg-[#0B2A5C] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#071D42] transition-all active:scale-95 group"
                 >
-                  <span>Quero uma proposta gratuita</span>
+                  <span>Falar com um Especialista</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
@@ -343,9 +365,6 @@ export const LandingSite = () => {
               <span>Falar com Especialista em Sites</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <p className="text-[13px] text-white/70 mt-5">
-              ✓ +30 empresas atendidas &nbsp;|&nbsp; ✓ Resposta em até 15 min
-            </p>
           </div>
         </section>
 

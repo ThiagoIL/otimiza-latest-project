@@ -74,10 +74,10 @@ const ProjectCard = ({ project, ctaLink }: { project: Project; ctaLink: string }
   <Link
     to={ctaLink}
     aria-label={`Quero um site como o da ${project.label}`}
-    className="group relative shrink-0 w-[260px] md:w-[320px] mx-3 rounded-2xl overflow-hidden shadow-xl"
+    className="group relative shrink-0 w-[320px] md:w-[400px] mx-3 rounded-2xl overflow-hidden shadow-xl"
     style={{ background: project.bg }}
   >
-    <div className="flex items-center justify-center h-[190px] md:h-[230px] px-8">
+    <div className="flex items-center justify-center h-[230px] md:h-[290px] px-8">
       <div
         className="w-full rounded-lg overflow-hidden shadow-2xl border border-white/10 bg-white transition-transform duration-500 ease-out group-hover:!rotate-0 group-hover:scale-105"
         style={{ transform: `perspective(900px) rotateY(${project.tiltY}deg) rotateX(${project.tiltX}deg)` }}
