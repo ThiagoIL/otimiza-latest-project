@@ -79,8 +79,18 @@
   animation: marquee-half 68s linear infinite reverse;
 }
 
+/* The hero ticker is short text, so 2 copies isn't enough buffer — at
+   normal viewport widths nearly a whole copy is visible at once, which
+   reads as the loop "restarting" instead of flowing continuously. 4
+   copies + a matching -25% (one copy-width) translation fixes that while
+   keeping the same per-item speed as marquee-half. */
+@keyframes marquee-quarter {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+
 .animate-marquee-ticker {
-  animation: marquee-half 26s linear infinite;
+  animation: marquee-quarter 26s linear infinite;
 }
 
 .animate-float {
