@@ -295,4 +295,5 @@ export const PARTNERS: Partner[] = [
   { id: '19', name: 'Parceiro 19', logo: '/image/partners/logo19.png' },
   { id: '20', name: 'Parceiro 20', logo: '/image/partners/logo20.png' },
   { id: '21', name: 'VSG', logo: '/image/partners/logo21.png' },
+  { id: '22', name: 'Alumes - Esquadrias de Alumínio', logo: '/image/partners/logo22.png' },
 ];
